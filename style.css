@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #fff;
+    --violet: #6a18b6;
+}
+
+body {
+    font-family: 'Nixie One', cursive;
+}
+
+/* ---- particles.js container ---- */
+#particles-js {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--violet);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-custom {
+    position: absolute;
+}
+
+/* Section CIRCLE */
+
+.circle {
+    width: 300px;
+    height: 300px;
+    background-color: rgba(245, 245, 245, 0.20);
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.opener {
+    width: 50px;
+    height: 50px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--white);
+    background-color: var(--violet);
+    border-radius: 100%;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.face {
+    width: 50px;
+    height: 50px;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    position: absolute;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.face:hover {
+    transform: scale(1.9);
+}
+
+
+/* Section CARD */
+
+.card {
+    --bs-card-bg: rgba(245, 245, 245, 0.20);
+    color: var(--white);
+}
+.img-card {
+    width: 70%;
+    margin: auto;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+}
+.card-text{
+    margin: 0;
+}
+.btn-card{
+    text-transform: uppercase;
+    border: 1px solid var(--white);
+    color: var(--white);
+    font-weight: bolder;
+    transition: 0.4s;
+}
+.btn-card:hover{
+    background: var(--white);
+    color: var(--violet);
+    font-weight: bolder;
+    transform: scale(1.1);
+    transition: 0.4s;
+}
+
+/* Section Modal */
+.modal-header{
+    background: rgba(245, 245, 245, 0.20);
+}
+.modal-content{
+    background: #6a18b6d7;
+    color: var(--white);
+    font-weight: bolder;
+}
+
+
+/* Media query */
+@media screen and (max-width:768px) {
+
+    .card{
+        background-position: center;
+        background-size: cover;
+        margin-top: 25px !important;
+    }
+
+    .img-card {
+        display: none;
+    }
+
+    .card-body{
+        text-align: center;
+    }
+
+    .card-text{
+        font-size: 12px;
+    }
+}
